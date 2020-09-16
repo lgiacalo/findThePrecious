@@ -1,2 +1,9 @@
 
 
+.card .card-img-overlay h3 {
+  display: none;
+
+}
+.card:hover .card-img-overlay h3 {
+  display: block;
+}
