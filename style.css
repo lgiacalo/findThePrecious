@@ -12,3 +12,8 @@
   top: 0;
   bottom: auto;
 } */
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
