@@ -27,4 +27,4 @@ Le périple de findThePrecious.com s'approche de sa fin !
 
 ---
 
-## View Website : [findThePrecious](lgiacalo.github.io/findThePrecious/)
+## View Website : [findThePrecious](https://lgiacalo.github.io/findThePrecious/)
