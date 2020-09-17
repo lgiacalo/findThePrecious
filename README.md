@@ -35,8 +35,6 @@ Afin de donner plus de style au site findThePrecious, Sauron veut être en mesur
 Plein d'anneaux, des grands, des petits, avec plein de couleurs différentes !
 Tu devras donc, à l'aide de SCSS, créer une mixin appelée ring qui permet de dessiner un anneau.
 
-    Hint : un anneau n'est rien d'autre qu'un carré avec un border-radius important, sans couleur de fond mais avec une bordure assez large.
-
 Cette mixin doit te permettre :
 
 1. De choisir une taille et une couleur pour l'anneau
