@@ -33,34 +33,23 @@
 @mixin ring($size, $color) {
     height: $size;
     width: $size;
-    border: $size / 15 solid $color;
+    border: $size / 12 solid $color;
     border-radius: 50%;
-    box-shadow: inset $size/20 $size/20 20px 1px $color, 
-        $size/15 $size/15 20px 1px $color;
+    box-shadow: $size/50 $size/50 $size/50 darken($color, 20%), inset $size/50 $size/50 $size/50 darken($color, 20%);
 }
-
-
 
 .scss {
-    .round1 {
-        @include ring(20vw, red)
+    .round7 {
+        @include ring(100px, #ffcb00)
     }
-    .round2 {
-        @include ring(20vw, red)
+    .round8 {
+        @include ring(100px, #f97210)
     }
 }
 
-.imb {
-    width: 100%;
-    height: 500px;
-    position: relative;
-}
-
-@for $i from 3 through 6 {
+@for $i from 1 through 6 {
     .round#{$i} {
-        @include ring((20vw / (10 - $i)) * $i, gray);
-        position: absolute;
-        top: #{100 - ($i * 20)}px;
-        left: 30px + $i * 50;
+        @include ring(10px + (($i + 1) * 12), #39424e);
+        margin-right: -(((5 + $i) * 15) * 0.20px);
     }
   }
