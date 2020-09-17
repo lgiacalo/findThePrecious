@@ -18,11 +18,16 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+           
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#" title="go fellows">Fellows<span
+                <a class="nav-item nav-link active mx-3" href="#fellows" title="go fellows">Fellows<span
                         class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="#" title="go contact us">Contact us</a>
+                <a class="nav-item nav-link active mx-3" href="#" title="go contact us">The ring</a>
+                <a class="nav-item nav-link active mx-3" href="#reward" title="go contact us">Reward</a>
+                <a class="nav-item nav-link active mx-3" href="#" title="go contact us">Hunters</a>
+                <a class="nav-item nav-link active mx-3" href="#" title="go contact us">Join</a>
+                <a class="nav-item nav-link active mx-3" href="#contact" title="go contact us">Contact</a>
             </div>
         </div>
     </nav>
@@ -59,9 +64,12 @@
                 <div class="carousel-item dackvador active">
                     <img src="img/dark_vador.jpg" class="d-block w-100" alt="...">
                     <div
-                        class="carousel-caption d-flex flex-column h-75 align-items-center justify-content-start">
-                        <h1>Second slide label</h1>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        class="carousel-caption d-flex flex-column h-75 align-items-start justify-content-start text-align-start">
+                        <h1 class="h1">Sauron is a very good bro,</h1>
+                        <div class="d-flex w-100 mt-4">
+                            <p class="d-flex w-100 justify-content-start h3">Please help him to find his ring !</p>
+                            <p class="d-flex w-100 justify-content-center h3">- d.v.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -86,12 +94,12 @@
     </section>
 
     <section>
-        <div class="container my-5">
+        <div id="fellows" class="container my-5">
             <h1 class="text-center">Fellows wanted dead <span class="blockquote">(or alive if you want to eat them
                     later)</span></h1>
         </div>
 
-        <div class="container-fluid mb-5">
+        <div id="reward" class="container-fluid mb-5">
             <div class="row justify-content-center">
                 <article class="col-sm-5 col-md-4 my-3">
                     <div class="card">
@@ -141,7 +149,7 @@
 
     <hr>
 
-    <form class="container-fluid">
+    <form id="contact" class="container-fluid">
         <h2>Contact us</h2>
         <div class="container my-5 clearfix">
             <div class="form-group">
