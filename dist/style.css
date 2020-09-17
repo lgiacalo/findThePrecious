@@ -9,13 +9,18 @@
 body {
   font-family: "PartyBusiness";
 }
-
-nav {
-  background-color: #D32F00;
-}
-
-h1, h2, h3, h4, h5, h6 {
+body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Aniron";
+}
+body nav {
+  background-color: #D32F00;
+  font-size: 2.5vw;
+}
+body nav a {
+  color: #D0CFCF;
+}
+body .carousel .dackvador h1 {
+  color: #D0CFCF;
 }
 
 .carousel-control-next,

@@ -15,18 +15,27 @@
 }
 
 $orange: #D32F00;
+$white: #D0CFCF;
 
 body {
-    font-family: "PartyBusiness"
+    font-family: "PartyBusiness";
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Aniron";
+    }
+    nav {
+        background-color: $orange;
+        font-size: 2.5vw;
+        a {
+            color: $white;
+        }
+
+    }
+    .carousel .dackvador h1 {
+        color: $white;
+    }
 }
 
-nav {
-    background-color: $orange;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Aniron";
-}
 
 
 
