@@ -1,5 +1,17 @@
 @use "sass:color";
 
+@font-face {
+    font-family: "Aniron";
+    src: url("../fonts/Aniron.ttf") format("truetype"),
+        url("../fonts/PartyBusiness-4B0K.ttf"), 
+        local("Arial Black"), local("sherif")
+  }
+
+h1 {
+    font-family: "Aniron";
+}
+
+
 
 .carousel-control-next,
 .carousel-control-prev {
