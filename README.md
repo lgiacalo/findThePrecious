@@ -64,4 +64,4 @@ Poste le résultat sur une page github. Tu peux reprendre et compléter ton proj
 
 
 
-## View Website : [findThePrecious](lgiacalo.github.io/findThePrecious/)
+## View Website : [findThePrecious](https://lgiacalo.github.io/findThePrecious/)
