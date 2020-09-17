@@ -14,10 +14,15 @@
         local("Arial Black"), local("sherif")
 }
 
+$orange: #D32F00;
+
 body {
     font-family: "PartyBusiness"
 }
 
+nav {
+    background-color: $orange;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Aniron";
