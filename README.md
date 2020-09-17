@@ -1,4 +1,4 @@
-# [findThePrecious](lgiacalo.github.io/findThePrecious/)
+# [findThePrecious](https://lgiacalo.github.io/findThePrecious/)
 
 # Integration Finale : Tome 1
 ## Structure findThePrecious
