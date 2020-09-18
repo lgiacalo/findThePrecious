@@ -36,9 +36,6 @@ body {
     }
 }
 
-
-
-
 .carousel-control-next,
 .carousel-control-prev {
     filter: invert(100%);
@@ -79,4 +76,42 @@ body {
         @include ring(10px + (($i + 1) * 12), #39424e);
         margin-right: -(((5 + $i) * 15) * 0.20px);
     }
+}
+
+
+
+
+
+
+.gandalf {
+    width: 280px; height: 320px;
+    // background: url('../img/css_sprites_thumbnails.png') -0 -0;
+}
+
+.aragord {
+    width: 280px; height: 320px;
+    // background: url('../img/css_sprites_thumbnails.png') -280px -0;
+}
+
+.gimli {
+    width: 280px; height: 320px;
+    // background: url('../img/css_sprites_thumbnails.png') -560px -0;
+}
+
+
+
+
+.bg-gandalf {
+    width: 280px; height: 320px;
+    background: url('../img/css_sprites_thumbnails.png') -0 -0;
+}
+
+.bg-aragord {
+    width: 280px; height: 320px;
+    background: url('../img/css_sprites_thumbnails.png') -280px -0;
+}
+
+.bg-gimli {
+    width: 280px; height: 320px;
+    background: url('../img/css_sprites_thumbnails.png') -560px -0;
 }

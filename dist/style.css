@@ -104,3 +104,36 @@ body .carousel .dackvador h1 {
   box-shadow: 2.35px 2.35px 3.1333333333px #0e1013, inset 2.35px 2.35px 3.1333333333px #0e1013;
   margin-right: -33px;
 }
+
+.gandalf {
+  width: 280px;
+  height: 320px;
+}
+
+.aragord {
+  width: 280px;
+  height: 320px;
+}
+
+.gimli {
+  width: 280px;
+  height: 320px;
+}
+
+.bg-gandalf {
+  width: 280px;
+  height: 320px;
+  background: url("../img/css_sprites_thumbnails.png") 0 0;
+}
+
+.bg-aragord {
+  width: 280px;
+  height: 320px;
+  background: url("../img/css_sprites_thumbnails.png") -280px 0;
+}
+
+.bg-gimli {
+  width: 280px;
+  height: 320px;
+  background: url("../img/css_sprites_thumbnails.png") -560px 0;
+}
