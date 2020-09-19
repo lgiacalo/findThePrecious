@@ -65,6 +65,12 @@ body {
         }
     }
 
+    .symb {
+        font-family: "Tngani";
+        color: $orange;
+        font-size: 30px;
+        font-weight: lighter;
+    }
 
     section.thumbnails {
 
@@ -74,13 +80,6 @@ body {
 
         .blockquote {
             font-size: 1rem;
-        }
-
-        .symb {
-            font-family: "Tngani";
-            color: $orange;
-            font-size: 30px;
-            font-weight: lighter;
         }
 
         div.pills {
@@ -107,7 +106,6 @@ body {
         }
 
         div#reward {
-            
             font-family: "PartyBusiness";
             .card {
                 background-color: rgba(#000, .90);
@@ -115,7 +113,7 @@ body {
                 border-radius: 0;
                 border: 6px solid rgba(#000, .70);
                 font-size: 2.5vw;
-                
+                max-width: 370px;
                 
                 img {
                     opacity: 0.7;
@@ -141,6 +139,38 @@ body {
                     }
                 }
             }
+        }
+    }
+
+
+    hr {
+        border-top: 4px solid $orange;
+        margin: 2.5em auto;
+        width: 45%;
+        transform: skew(-45deg);
+    }
+
+
+    section.contact-us {
+        background-image: url('../img/bg_dark.png');
+        color: white;
+        h1 {
+            font-size: 1.5em;
+        }
+        div p {
+            font-family: "PartyBusiness";
+            font-size: 1.5em;
+            color: $white;
+        }
+
+        div a {
+            color: $orange;
+            transform: skew(-25deg);
+            font-size: 1.5em;
+        }
+        div a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
         }
     }
 

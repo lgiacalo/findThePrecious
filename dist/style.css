@@ -40,17 +40,17 @@ body div.carousel h1 {
 body div.carousel div p {
   font-size: 2.5vw;
 }
+body .symb {
+  font-family: "Tngani";
+  color: #fe661d;
+  font-size: 30px;
+  font-weight: lighter;
+}
 body section.thumbnails h1 {
   font-size: 2em;
 }
 body section.thumbnails .blockquote {
   font-size: 1rem;
-}
-body section.thumbnails .symb {
-  font-family: "Tngani";
-  color: #fe661d;
-  font-size: 30px;
-  font-weight: lighter;
 }
 body section.thumbnails div.pills {
   color: rgba(102, 102, 102, 0.9);
@@ -78,6 +78,7 @@ body section.thumbnails div#reward .card {
   border-radius: 0;
   border: 6px solid rgba(0, 0, 0, 0.7);
   font-size: 2.5vw;
+  max-width: 370px;
 }
 body section.thumbnails div#reward .card img {
   opacity: 0.7;
@@ -97,6 +98,33 @@ body section.thumbnails div#reward .card .card-img-overlay .rounded {
 }
 body section.thumbnails div#reward .card .card-img-overlay .rounded span {
   color: #fe661d;
+}
+body hr {
+  border-top: 4px solid #fe661d;
+  margin: 2.5em auto;
+  width: 45%;
+  transform: skew(-45deg);
+}
+body section.contact-us {
+  background-image: url("../img/bg_dark.png");
+  color: white;
+}
+body section.contact-us h1 {
+  font-size: 1.5em;
+}
+body section.contact-us div p {
+  font-family: "PartyBusiness";
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.9);
+}
+body section.contact-us div a {
+  color: #fe661d;
+  transform: skew(-25deg);
+  font-size: 1.5em;
+}
+body section.contact-us div a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
 }
 
 .card .card-img-overlay h3 {
