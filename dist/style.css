@@ -45,11 +45,28 @@ body section.thumbnails h1 {
 body section.thumbnails .blockquote {
   font-size: 1rem;
 }
-body section.thumbnails .symb-thumbnails {
+body section.thumbnails .symb {
   font-family: "Tngani";
   color: #fe661d;
   font-size: 30px;
   font-weight: lighter;
+}
+body section.thumbnails div.pills {
+  color: rgba(102, 102, 102, 0.9);
+  text-align: center;
+}
+body section.thumbnails div.pills div {
+  cursor: pointer;
+}
+body section.thumbnails div.pills .symb {
+  font-size: 15px;
+}
+body section.thumbnails div.pills span.nowrap {
+  white-space: nowrap;
+}
+body section.thumbnails div.pills div.mx-3 {
+  border-bottom: 4px solid #fe661d;
+  color: #fe661d;
 }
 
 .card .card-img-overlay h3 {

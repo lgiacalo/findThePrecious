@@ -23,6 +23,7 @@
 
 $orange: #fe661d;
 $white: rgba(#fff,.90);
+$gray: rgba(#666666,.90);
 
 body {
     background-image: url('../img/bg_light.png');
@@ -68,12 +69,32 @@ body {
         .blockquote {
             font-size: 1rem;
         }
-        .symb-thumbnails{
+        .symb{
             font-family: "Tngani";
             color: $orange;
             font-size: 30px;
             font-weight: lighter;
 
+        }
+        div.pills {
+            
+            color: $gray;
+            text-align: center;
+            div {
+                cursor: pointer;
+            }
+            .symb {
+                font-size: 15px;
+
+            }
+            span.nowrap {
+                white-space: nowrap;
+            }
+            div.mx-3{
+                border-bottom: 4px solid $orange;
+                color: $orange;
+            }
+            
         }
 
     }
