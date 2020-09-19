@@ -14,26 +14,33 @@
         local("Arial Black"), local("sherif")
 }
 
-$orange: #D32F00;
-$white: #D0CFCF;
+$orange: #fe661d;
+// $white: #D0CFCF;
+$white: #fff;
+$white-hover: rgba(#D0CFCF,.50);
 
 body {
     font-family: "PartyBusiness";
     
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, {
         font-family: "Aniron";
     }
     nav {
+        font-family: "Aniron";
         background-color: $orange;
-        font-size: 2.5vw;
-        a {
-            color: $white;
-        }
+        font-size: 1.5vw;
 
+        a, p.vertical-bar {
+            color: $white;
+            white-space: nowrap;
+        }
+        a:hover {
+            color: $white-hover;
+            text-decoration: underline;
+        }
     }
-    .carousel .dackvador h1 {
-        color: $white;
-    }
+
+
 }
 
 .carousel-control-next,

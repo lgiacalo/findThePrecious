@@ -13,14 +13,17 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Aniron";
 }
 body nav {
-  background-color: #D32F00;
-  font-size: 2.5vw;
+  font-family: "Aniron";
+  background-color: #fe661d;
+  font-size: 1.5vw;
 }
-body nav a {
-  color: #D0CFCF;
+body nav a, body nav p.vertical-bar {
+  color: #fff;
+  white-space: nowrap;
 }
-body .carousel .dackvador h1 {
-  color: #D0CFCF;
+body nav a:hover {
+  color: rgba(208, 207, 207, 0.5);
+  text-decoration: underline;
 }
 
 .carousel-control-next,
