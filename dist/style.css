@@ -7,6 +7,7 @@
   src: url("../fonts/PartyBusiness-4B0K.ttf"), url("../fonts/PartyBusiness-4B0K.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
 body {
+  background-image: url("../img/bg_light.png");
   font-family: "PartyBusiness";
 }
 body nav {

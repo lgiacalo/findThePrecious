@@ -15,13 +15,10 @@
 }
 
 $orange: #fe661d;
-// $white: #D0CFCF;
 $white: rgba(#fff,.90);
-// $white-hover: rgba(#fff,.90);
-
-
 
 body {
+    background-image: url('../img/bg_light.png');
     font-family: "PartyBusiness";
     
     // h1, h2, h3, h4, h5, h6, {
@@ -52,9 +49,10 @@ body {
         }
         div p {
             font-size: 2.5vw;
-            
         }
     }
+
+
 
 }
 
