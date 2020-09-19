@@ -30,14 +30,17 @@ body {
     nav {
         font-family: "Aniron";
         background-color: $orange;
+        font-size: 1.5vw;
+
 
         a, p.vertical-bar {
             color: $white;
             white-space: nowrap;
         }
         a:hover {
-            color: $white-hover;
+            color: $white;
             text-decoration: underline;
+            text-decoration-thickness: 0.15em;
         }
     }
 
@@ -53,10 +56,7 @@ body {
 
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
-}
+
 
 
 .card {

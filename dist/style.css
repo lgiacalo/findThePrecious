@@ -12,25 +12,22 @@ body {
 body nav {
   font-family: "Aniron";
   background-color: #fe661d;
+  font-size: 1.5vw;
 }
 body nav a, body nav p.vertical-bar {
   color: #fff;
   white-space: nowrap;
 }
 body nav a:hover {
-  color: rgba(208, 207, 207, 0.5);
+  color: #fff;
   text-decoration: underline;
+  text-decoration-thickness: 0.15em;
 }
 body div.carousel h1 {
   font-size: 5vw;
 }
 body div.carousel div p {
   font-size: 2.5vw;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-  filter: invert(100%);
 }
 
 .card .card-img-overlay h3 {
