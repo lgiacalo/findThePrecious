@@ -155,10 +155,34 @@ body section.media-object div.race {
 }
 body section.panels {
   background-image: url("../img/bg_dark.png");
-  color: white;
 }
 body section.panels h1 {
+  color: white;
   font-size: 1.5em;
+}
+body section.panels div.card {
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+}
+body section.panels div.card-header {
+  background-color: #fe661d;
+  border: 2px solid #fe661d;
+  border-radius: 10px 10px 0px 0px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5em;
+}
+body section.panels div.card-body {
+  background-color: #dddddd;
+  font-family: "PartyBusiness";
+  font-size: 2em;
+  border-bottom: 5px solid #fe661d;
+}
+body section.panels div.card-body div.cite {
+  text-align: right;
+  color: gray;
+}
+body section.panels div.card-body img {
+  max-width: 150px;
 }
 body section.join h1 {
   font-size: 1.5em;

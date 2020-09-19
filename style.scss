@@ -219,10 +219,37 @@ body {
 
     section.panels {
         background-image: url('../img/bg_dark.png');
-        color: white;
-
+        
         h1 {
+            color: white;
             font-size: 1.5em;
+        }
+        div.card {
+            border: none;
+            // border-top: 2px solid $orange;
+            border-radius: 10px 10px 0px 0px;
+
+        }
+        div.card-header{
+            background-color: $orange;
+            border: 2px solid $orange;
+            border-radius: 10px 10px 0px 0px;
+            color: rgba(#fff, .90);
+            font-size: 1.5em;
+
+        }
+        div.card-body {
+            background-color: #dddddd;
+            font-family: "PartyBusiness";
+            font-size: 2em;
+            border-bottom: 5px solid $orange;
+            div.cite{
+                text-align: right;
+                color: gray;
+            }
+            img {
+                max-width: 150px;
+            }
         }
 
     }
