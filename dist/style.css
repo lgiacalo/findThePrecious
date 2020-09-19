@@ -184,6 +184,19 @@ body section.panels div.card-body div.cite {
 body section.panels div.card-body img {
   max-width: 150px;
 }
+body section.panels div.card-body table {
+  font-family: "Aniron";
+  font-size: 0.5em;
+}
+body section.panels div.card-body table thead tr th {
+  border-bottom: 2px solid black;
+}
+body section.panels div.card-body table tbody {
+  color: rgba(102, 102, 102, 0.9);
+}
+body section.panels div.card-body table tbody tr td {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.7);
+}
 body section.join h1 {
   font-size: 1.5em;
 }
