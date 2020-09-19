@@ -14,21 +14,27 @@
         local("Arial Black"), local("sherif")
 }
 
+@font-face {
+    font-family: "Tngani";
+    src: url("../fonts/Tngani.ttf"),
+        url("../fonts/Tngani.ttf") format("truetype"), 
+        local("Arial Black"), local("sherif")
+}
+
 $orange: #fe661d;
 $white: rgba(#fff,.90);
 
 body {
     background-image: url('../img/bg_light.png');
-    font-family: "PartyBusiness";
+    font-family: "Aniron";
     
     // h1, h2, h3, h4, h5, h6, {
-    //     // font-family: "Aniron";
+        // font-family: "Aniron";
     // }
     nav {
-        font-family: "Aniron";
         background-color: $orange;
         font-size: 1.5vw;
-
+        
         a.navbar-brand {
             max-width: 70%;
         }
@@ -42,8 +48,9 @@ body {
             text-decoration-thickness: 0.15em;
         }
     }
-
+    
     div.carousel {
+        font-family: "PartyBusiness";
         h1 {
             font-size: 5vw;
         }
@@ -53,6 +60,23 @@ body {
     }
 
 
+    section.thumbnails {
+
+        h1 {
+            font-size: 2em;
+        }
+        .blockquote {
+            font-size: 1rem;
+        }
+        .symb-thumbnails{
+            font-family: "Tngani";
+            color: $orange;
+            font-size: 30px;
+            font-weight: lighter;
+
+        }
+
+    }
 
 }
 

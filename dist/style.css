@@ -6,12 +6,15 @@
   font-family: "PartyBusiness";
   src: url("../fonts/PartyBusiness-4B0K.ttf"), url("../fonts/PartyBusiness-4B0K.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
+@font-face {
+  font-family: "Tngani";
+  src: url("../fonts/Tngani.ttf"), url("../fonts/Tngani.ttf") format("truetype"), local("Arial Black"), local("sherif");
+}
 body {
   background-image: url("../img/bg_light.png");
-  font-family: "PartyBusiness";
+  font-family: "Aniron";
 }
 body nav {
-  font-family: "Aniron";
   background-color: #fe661d;
   font-size: 1.5vw;
 }
@@ -27,11 +30,26 @@ body nav a:hover {
   text-decoration: underline;
   text-decoration-thickness: 0.15em;
 }
+body div.carousel {
+  font-family: "PartyBusiness";
+}
 body div.carousel h1 {
   font-size: 5vw;
 }
 body div.carousel div p {
   font-size: 2.5vw;
+}
+body section.thumbnails h1 {
+  font-size: 2em;
+}
+body section.thumbnails .blockquote {
+  font-size: 1rem;
+}
+body section.thumbnails .symb-thumbnails {
+  font-family: "Tngani";
+  color: #fe661d;
+  font-size: 30px;
+  font-weight: lighter;
 }
 
 .card .card-img-overlay h3 {
