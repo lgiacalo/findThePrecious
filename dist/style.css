@@ -126,8 +126,32 @@ body section.contact-us div a:hover {
   text-decoration: underline;
   text-decoration-thickness: 0.15em;
 }
+body section.media-object div.symb {
+  font-family: "Tngani";
+  color: #fe661d;
+  font-size: 30px;
+  font-weight: lighter;
+}
 body section.media-object h1 {
   font-size: 1.5em;
+}
+body section.media-object div div {
+  font-family: "PartyBusiness";
+}
+body section.media-object div div h1 {
+  color: #fe661d;
+  font-size: 3em;
+}
+body section.media-object div div p {
+  font-size: 2em;
+}
+body section.media-object div div p span {
+  text-decoration: underline;
+}
+body section.media-object div.race {
+  color: #fe661d;
+  background-image: url("../img/bg_dark.png");
+  transform: skew(-20deg);
 }
 body section.panels {
   background-image: url("../img/bg_dark.png");
