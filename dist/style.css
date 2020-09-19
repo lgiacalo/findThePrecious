@@ -9,9 +9,6 @@
 body {
   font-family: "PartyBusiness";
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Aniron";
-}
 body nav {
   font-family: "Aniron";
   background-color: #fe661d;
@@ -24,6 +21,12 @@ body nav a, body nav p.vertical-bar {
 body nav a:hover {
   color: rgba(208, 207, 207, 0.5);
   text-decoration: underline;
+}
+body div.carousel h1 {
+  font-size: 5vw;
+}
+body div.carousel div p {
+  font-size: 2.5vw;
 }
 
 .carousel-control-next,
