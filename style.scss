@@ -16,8 +16,8 @@
 
 $orange: #fe661d;
 // $white: #D0CFCF;
-$white: #fff;
-$white-hover: rgba(#D0CFCF,.50);
+$white: rgba(#fff,.90);
+// $white-hover: rgba(#fff,.90);
 
 
 
@@ -32,7 +32,9 @@ body {
         background-color: $orange;
         font-size: 1.5vw;
 
-
+        a.navbar-brand {
+            max-width: 70%;
+        }
         a, p.vertical-bar {
             color: $white;
             white-space: nowrap;

@@ -14,12 +14,15 @@ body nav {
   background-color: #fe661d;
   font-size: 1.5vw;
 }
+body nav a.navbar-brand {
+  max-width: 70%;
+}
 body nav a, body nav p.vertical-bar {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   white-space: nowrap;
 }
 body nav a:hover {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
   text-decoration-thickness: 0.15em;
 }
