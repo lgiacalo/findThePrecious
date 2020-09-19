@@ -126,6 +126,26 @@ body section.contact-us div a:hover {
   text-decoration: underline;
   text-decoration-thickness: 0.15em;
 }
+body section.media-object h1 {
+  font-size: 1.5em;
+}
+body section.panels {
+  background-image: url("../img/bg_dark.png");
+  color: white;
+}
+body section.panels h1 {
+  font-size: 1.5em;
+}
+body section.join h1 {
+  font-size: 1.5em;
+}
+body form#contact {
+  background-image: url("../img/bg_dark.png");
+  color: white;
+}
+body form#contact h1 {
+  font-size: 1.5em;
+}
 
 .card .card-img-overlay h3 {
   display: none;
