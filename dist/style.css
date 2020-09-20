@@ -200,6 +200,20 @@ body section.panels div.card-body table tbody tr td {
 body section.join h1 {
   font-size: 1.5em;
 }
+body section.join .row {
+  font-family: "PartyBusiness";
+  font-size: 1.5em;
+}
+body section.join .row .more-info {
+  font-family: "Aniron";
+  color: #fe661d;
+}
+body section.join .row .more-info div.mail span {
+  display: inline-block;
+  background-image: url("../img/bg_dark.png");
+  border: 1px solid black;
+  transform: skew(-20deg);
+}
 body form#contact {
   background-image: url("../img/bg_dark.png");
   color: white;

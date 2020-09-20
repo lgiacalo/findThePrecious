@@ -264,8 +264,6 @@ body {
                 font-size: 0.5em;
 
                 thead tr th{
-                    // display: block;
-                    // width: 100%;
                     border-bottom: 2px solid black;
                 }
                 tbody {
@@ -284,6 +282,21 @@ body {
     section.join {
         h1 {
             font-size: 1.5em;
+        }
+        .row {
+            font-family: "PartyBusiness";
+            font-size: 1.5em;
+
+            .more-info{
+                font-family: "Aniron";
+                color: $orange;
+                div.mail span {
+                    display: inline-block;
+                    background-image: url("../img/bg_dark.png");
+                    border: 1px solid black;
+                    transform: skew(-20deg);
+                }
+            }
         }
     }
 
