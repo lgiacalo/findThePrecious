@@ -18,15 +18,21 @@ $black: black;
     background: $black;
 }
 
-h1 {
-    font-size: 7vw;
+header {
+    h1 {
+        font-size: 7vw;
+    }
+    blockquote.blockquote {
+        font-size: 2vw;
+        a {text-decoration: none;}
+    }
 }
 
 main {
     max-width: 700px !important;
-}
-
-.row > div {
-    padding: 0;
-    border: 1px solid white;
+    
+    .row > div {
+        padding: 0;
+        border: 1px solid white;
+    }
 }
