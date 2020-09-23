@@ -1,0 +1,28 @@
+.bg-gray {
+  background: #464545;
+}
+
+.bg-orange {
+  background: #ff8300;
+}
+
+.bg-yellow {
+  background: #ffcb00;
+}
+
+.bg-black {
+  background: black;
+}
+
+h1 {
+  font-size: 7vw;
+}
+
+main {
+  max-width: 700px !important;
+}
+
+.row > div {
+  padding: 0;
+  border: 1px solid white;
+}
