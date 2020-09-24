@@ -1,11 +1,15 @@
 
+const superToggle = (el, classes) => {
+    classes.forEach(cl => el.classList.toggle(cl));
+}
+
 // event to add new todo
 const formTodo = document.querySelector(".js-form");
 formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
     e.preventDefault();
     if (inputTodo.value) {
-        newItem(inputTodo.value);
+        addItem(inputTodo.value);
     }
     inputTodo.value = "";
 })
@@ -13,19 +17,15 @@ formTodo.addEventListener("submit", (e) => {
 const listItems = document.getElementById("list-items");
 const templateLi = document.querySelector(".d-none li");
 
-function addNewItem(listItems, value) {
+function createNewItem(listItems, value) {
     const cloneli = templateLi.cloneNode(true);
     cloneli.querySelector("a").textContent = value;
     listItems.insertAdjacentElement('afterbegin', cloneli);
     return cloneli;
 }
 
-const superToggle = (el, classes) => {
-    classes.forEach(cl => el.classList.toggle(cl));
-}
-
-function newItem(value){
-    const newItem = addNewItem(listItems, value);
+function addItem(value){
+    const newItem = createNewItem(listItems, value);
     console.log('newItem :>> ', newItem);
     newItem.querySelector(".button-check")
         .addEventListener("click", (e) => {
