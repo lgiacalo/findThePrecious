@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "todolist with parcel + pages.js + localStorage",
   "main": "main.js",
-	"scripts": {
+  "scripts": {
     "start": "parcel ./index.html",
     "prebuild-dev": "shx rm -rf dist/*",
     "build-dev": "parcel build ./index.html --no-minify --public-url ./",
