@@ -127,7 +127,7 @@ page();
 initTodoListItems();
 
 function index(e) {
-    
+    e.preventDefault();
     toggleDisplayTodoItem("todo");
     const desc = document.querySelector(".description");
     desc.textContent = "What do you want to get done today?";
@@ -135,6 +135,8 @@ function index(e) {
 }
 
 function item(e) {
+    e.preventDefault();
+
     console.log('e :>> ', e);
     const id = e.params.id || 0;
     
