@@ -4,6 +4,9 @@ const superToggle = (el, classes) => {
 }
 
 
+function getItemsLocalStorage(){
+    return JSON.parse(localStorage.getItem("items"))
+}
 
 function removeItemLocalStorage(value){
     let items = JSON.parse(localStorage.getItem("items"));
@@ -25,6 +28,7 @@ function recordItemLocalStorage(value) {
 function toggleCheckLocalStorage(value){
     let items = JSON.parse(localStorage.getItem("items"));
     let it = items.find(it => it.title === value);
+
     it.check = !(it.check);
     localStorage.setItem("items", JSON.stringify(items));
 }
@@ -34,11 +38,13 @@ function toggleCheckLocalStorage(value){
 
 const listItems = document.getElementById("list-items");
 const templateLi = document.querySelector(".d-none li");
+const classNameButton = ["far", "fa-circle", "fas", "fa-check-circle"];
 
 // event to add new todo
 const formTodo = document.querySelector(".js-form");
 formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
+
     e.preventDefault();
     if (inputTodo.value) {
         if (recordItemLocalStorage(inputTodo.value.trim())){
@@ -52,16 +58,22 @@ formTodo.addEventListener("submit", (e) => {
 
 function createNewItem(listItems, value, check) {
     const cloneli = templateLi.cloneNode(true);
+
     cloneli.querySelector("a").textContent = value;
+    if (check) {
+        superToggle(cloneli.querySelector("i"), classNameButton);
+        cloneli.querySelector("span").classList.toggle("item-check");
+    }
     listItems.insertAdjacentElement('afterbegin', cloneli);
     return cloneli;
 }
 
 function setEventButton(item){
     const value = item.querySelector("a").textContent.trim();
+
     item.querySelector(".button-check")
         .addEventListener("click", (e) => {
-            superToggle(e.target, ["far", "fa-circle", "fas", "fa-check-circle"]);
+            superToggle(e.target, classNameButton);
             item.querySelector("span").classList.toggle("item-check");
             toggleCheckLocalStorage(value);
     })
@@ -74,13 +86,17 @@ function setEventButton(item){
 }
 
 
+function initTodoList(){
+    const items = getItemsLocalStorage();
+    
+    items.forEach(it => {
+        const li = createNewItem(listItems, it.title, it.check);
+        setEventButton(li);
+    });
+}
 
 
-
-
-
-
-
+initTodoList();
 
 
 
