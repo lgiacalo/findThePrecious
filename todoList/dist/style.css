@@ -18,8 +18,13 @@ div.container h1 {
 }
 div.container a {
   text-decoration: none;
-  color: black;
   font-weight: bolder;
+}
+div.container a:hover {
+  color: gray;
+}
+div.container li a {
+  color: black;
 }
 div.container .item-check {
   color: gray;

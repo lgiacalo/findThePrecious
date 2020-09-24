@@ -16,13 +16,14 @@ function removeItemLocalStorage(value){
 }
 
 function recordItemLocalStorage(value) {
-    let items = JSON.parse(localStorage.getItem("items")) ?? [];
+    const items = JSON.parse(localStorage.getItem("items")) ?? [];
+    const id = (items.length) ? items[items.length - 1].id + 1 : 1; 
 
     if (items.some(i => i.title === value)) return false
-    items.push({title: value, check: false, comm: {}})
+    items.push({id: id, title: value, check: false, comm: {}})
 
     localStorage.setItem("items", JSON.stringify(items));
-    return true;
+    return id;
 }
 
 function toggleCheckLocalStorage(value){
@@ -47,8 +48,9 @@ formTodo.addEventListener("submit", (e) => {
 
     e.preventDefault();
     if (inputTodo.value) {
-        if (recordItemLocalStorage(inputTodo.value.trim())){
-            let newItem = createNewItem(listItems, inputTodo.value.trim(), false);
+        const id = recordItemLocalStorage(inputTodo.value.trim())
+        if (id){
+            let newItem = createNewItem(listItems, inputTodo.value.trim(), id, false);
             setEventButton(newItem);
         }
     }
@@ -56,7 +58,7 @@ formTodo.addEventListener("submit", (e) => {
 })
 
 
-function createNewItem(listItems, value, check) {
+function createNewItem(listItems, value, id, check) {
     const cloneli = templateLi.cloneNode(true);
 
     cloneli.querySelector("a").textContent = value;
@@ -65,6 +67,7 @@ function createNewItem(listItems, value, check) {
         cloneli.querySelector("span").classList.toggle("item-check");
     }
     listItems.insertAdjacentElement('afterbegin', cloneli);
+    cloneli.querySelector("a").href += id;
     return cloneli;
 }
 
@@ -87,10 +90,10 @@ function setEventButton(item){
 
 
 function initTodoList(){
-    const items = getItemsLocalStorage();
+    const items = getItemsLocalStorage() ?? [];
     
     items.forEach(it => {
-        const li = createNewItem(listItems, it.title, it.check);
+        const li = createNewItem(listItems, it.title, it.id, it.check);
         setEventButton(li);
     });
 }
@@ -104,16 +107,27 @@ initTodoList();
 // gestion page.js
 
 page('/', index);
+page('/item/:item', item);
 page('/about', about);
-page('/items', contact);
 page('/contact/:contactName', contact);
 page();
+
+
 
 function index(e) {
 //   document.querySelector('p')
 //     .textContent = 'viewing index';
 //   console.log('e :>> ', e);
 }
+
+function item(e) {
+  console.log('e :>> ', e);
+  page.redirect("/item/1", "/item/14");
+  document.querySelector('p')
+    .textContent = 'viewing item ' + (e.params.item || '');
+}
+
+
 
 function about(e) {
 //   console.log('e :>> ', e);
@@ -123,10 +137,7 @@ function about(e) {
 }
 
 function contact(ctx) {
-//   console.log('ctx :>> ', ctx);
-
-  document.querySelector('p')
-    .textContent = 'viewing contact ' + (ctx.params.contactName || '');
-}
-
+    document.querySelector('p')
+      .textContent = 'viewing contact ' + (ctx.params.contactName || '');
+  }
 
