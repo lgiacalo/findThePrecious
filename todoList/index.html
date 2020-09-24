@@ -20,7 +20,9 @@
             <h1 class="display-1 text-center">
                 <a href="/" class="color-gray">Todos</a>
             </h1>
-            <img class="img-fluid rounded mx-auto d-block my-4" src="todolist.png" alt="image todolist">
+            <div class="img d-none">
+                <img class="img-fluid rounded mx-auto d-block my-4" src="todolist.png" alt="image todolist">
+            </div>
             <ul id="list-items" class="d-none px-0">
 
                 <div id="template-li" class="d-none">
@@ -40,7 +42,7 @@
 
 
             <div id="show-item" class="">
-                <h2 class="title-todo h2 text-center"></h2>
+                <h2 class="title-todo h2 text-center my-4"></h2>
 
                 <ul id="list-comm" class="list-group px-0">
 
@@ -58,17 +60,9 @@
                 </ul>
             </div>
 
-            <!-- add the empty state here -->
-            <div class="empty-state">
-
-                <h2 class="h2 text-center empty-state__title">Add your first todo</h2>
-                <p class="p empty-state__description">
-                    What do you want to get done today?
-                </p>
-            </div>
-
             <!-- end -->
-            <form class="js-form">
+            <form class="js-form pt-3">
+                <label class="p description">What do you want to get done today?</label>
                 <input autofocus="" type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app"
                     class="js-todo-input">
             </form>

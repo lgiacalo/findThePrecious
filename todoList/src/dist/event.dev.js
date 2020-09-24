@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.gestionInputComm = gestionInputComm;
 exports.gestionInputTodo = gestionInputTodo;
 
 var _localStorage = require("./localStorage.js");
@@ -11,8 +12,21 @@ var _gestionItems = require("./gestionItems.js");
 
 var formTodo = document.querySelector(".js-form");
 
+function gestionInputComm(id) {
+  formTodo.onsubmit = function (e) {
+    var inputComm = document.querySelector(".js-todo-input");
+    e.preventDefault();
+
+    if (inputComm.value.trim()) {
+      console.log('input :>> ', inputComm.value);
+    }
+
+    inputComm.value = "";
+  };
+}
+
 function gestionInputTodo() {
-  formTodo.addEventListener("submit", function (e) {
+  formTodo.onsubmit = function (e) {
     var inputTodo = document.querySelector(".js-todo-input");
     e.preventDefault();
 
@@ -26,5 +40,5 @@ function gestionInputTodo() {
     }
 
     inputTodo.value = "";
-  });
+  };
 }
