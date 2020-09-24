@@ -16,6 +16,13 @@ div.container {
 div.container h1 {
   font-weight: bolder;
 }
+div.container a {
+  text-decoration: none;
+  color: black;
+}
+div.container .item-check {
+  text-decoration: line-through;
+}
 
 button {
   all: unset;

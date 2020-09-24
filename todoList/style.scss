@@ -17,6 +17,14 @@ div.container {
   h1 {
     font-weight: bolder;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .item-check {
+    text-decoration:line-through;
+  }
 }
 
 

@@ -19,33 +19,21 @@
         <div class="container">
             <h1 class="display-1 color-gray text-center">Todos</h1>
             <img class="img-fluid rounded mx-auto d-block my-4" src="todolist.png" alt="image todolist">
-            <ul class=" px-0 ">
+            <ul id="list-items" class=" px-0 ">
 
-                <li class="d-flex align-items-center ">
-                    <button class="button-check color-blue">
-                        <i class="far fa-circle fa-2x"></i>
-                    </button>
-                    <span class="itemDoto p flex-grow-1 pl-3">
-                        <a href="./about">Finir cette todolist</a>
-                    </span>
-                    <button class=" color-gray">
-                        <i class="fas fa-times-circle fa-2x"></i>
-                    </button>
-                
-                </li>
-
-                <li class=" d-flex align-items-center ">
-                    <button class="button-check color-blue">
-                        <i class="far fa-circle fa-2x"></i>
-                    </button>
-                    <span class="itemDoto flex-grow-1 pl-3">
-                        <a href="./items">Finir cette todolist</a>
-                    </span>
-                    <button class="color-gray">
-                        <i class="fas fa-times-circle fa-2x"></i>
-                    </button>
-                
-                </li>
+                <div id="template-li" class="d-none">
+                    <li class="d-flex align-items-center ">
+                        <button class="button-check color-blue">
+                            <i class="far fa-circle fa-2x"></i>
+                        </button>
+                        <span class="itemDoto p flex-grow-1 pl-3">
+                            <a href="./about">Template</a>
+                        </span>
+                        <button class=" color-gray">
+                            <i class="fas fa-times-circle fa-2x"></i>
+                        </button>
+                    </li>
+                </div>
 
 
             </ul>
