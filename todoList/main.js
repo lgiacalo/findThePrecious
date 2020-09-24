@@ -124,15 +124,19 @@ const formTodo = document.querySelector(".js-form");
 // page('/item/:id', item);
 // page();
 
+page('/findThePrecious/todoList/', index);
+page('/findThePrecious/todoList/item/:id', item);
+page();
+
 initTodoListItems();
 
-// function index(e) {
-    // e.preventDefault();
+function index(e) {
+    e.preventDefault();
     toggleDisplayTodoItem("todo");
     const desc = document.querySelector(".description");
     desc.textContent = "What do you want to get done today?";
     gestionInputTodo();
-// }
+}
 
 function item(e) {
     e.preventDefault();
