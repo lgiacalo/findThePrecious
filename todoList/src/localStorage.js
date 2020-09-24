@@ -1,4 +1,9 @@
 
+export function getItemLocalStorage(id){
+    const items = getItemsLocalStorage();
+    return items.find(it => it.id == id);
+}
+
 export function getItemsLocalStorage(){
     return JSON.parse(localStorage.getItem("items"))
 }

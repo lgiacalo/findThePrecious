@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Todo List</title>
     <meta name="author" content="lgiacalo">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
                 <a href="/" class="color-gray">Todos</a>
             </h1>
             <img class="img-fluid rounded mx-auto d-block my-4" src="todolist.png" alt="image todolist">
-            <ul id="list-items" class=" px-0 ">
+            <ul id="list-items" class="d-none px-0">
 
                 <div id="template-li" class="d-none">
                     <li class="d-flex align-items-center ">
@@ -29,16 +29,34 @@
                             <i class="far fa-circle fa-2x"></i>
                         </button>
                         <span class="itemDoto p flex-grow-1 pl-3">
-                            <a href="./item/">Template</a>
+                            <a href="./item/">Template Item</a>
                         </span>
                         <button class="button-delete color-gray">
                             <i class="fas fa-times-circle fa-2x"></i>
                         </button>
                     </li>
                 </div>
-
-
             </ul>
+
+
+            <div id="show-item" class="">
+                <h2 class="title-todo h2 text-center"></h2>
+
+                <ul id="list-comm" class="list-group px-0">
+
+                    <div id="template-li-comm" class="d-none">
+                        <li class="d-flex align-items-center list-group-item">
+                            <p class="col-11 m-0">
+                                Template comm
+                            </p>
+                            <button class="button-delete color-gray">
+                                <i class="fas fa-times-circle fa-2x"></i>
+                            </button>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
 
             <!-- add the empty state here -->
             <div class="empty-state">

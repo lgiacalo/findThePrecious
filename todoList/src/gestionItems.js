@@ -1,14 +1,9 @@
-
 import * as ls from './localStorage.js'
-
+import {superToggle} from './utils.js'
 
 const templateLi = document.querySelector(".d-none li");
 const classNameButton = ["far", "fa-circle", "fas", "fa-check-circle"];
 const listItems = document.getElementById("list-items");
-
-const superToggle = (el, classes) => {
-    classes.forEach(cl => el.classList.toggle(cl));
-}
 
 export function initTodoListItems(){
     const items = ls.getItemsLocalStorage() ?? [];
@@ -18,7 +13,6 @@ export function initTodoListItems(){
         setEventButton(li);
     });
 }
-
 
 export function createNewItem(value, id, check) {
     const cloneli = templateLi.cloneNode(true);
