@@ -2,7 +2,7 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "todolist with parcel + pages.js + localStorage",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "parcel src/index.html --out-dir docs",
     "prebuild-dev": "shx rm -rf dist/* docs/*",
