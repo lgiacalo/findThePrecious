@@ -3,13 +3,39 @@ const superToggle = (el, classes) => {
     classes.forEach(cl => el.classList.toggle(cl));
 }
 
+
+
+function removeItemsLocalStorage(value){
+    let items = JSON.parse(localStorage.getItem("items"));
+
+    let newItems = items.filter(i => i.title !== value);
+    localStorage.setItem("items", JSON.stringify(newItems));
+}
+
+function recordLocalStorage(value) {
+    let items = JSON.parse(localStorage.getItem("items"));
+
+    if (items === null) items = [{title: value, comm: {}}];
+    else if (items.every(i => i.title !== value)) {
+        items.push({title: value, comm: {}})
+    } else return false
+
+    localStorage.setItem("items", JSON.stringify(items));
+    return true;
+}
+
+
+
+
 // event to add new todo
 const formTodo = document.querySelector(".js-form");
 formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
     e.preventDefault();
     if (inputTodo.value) {
-        addItem(inputTodo.value);
+        if (recordLocalStorage(inputTodo.value.trim())){
+            addItem(inputTodo.value.trim());
+        }
     }
     inputTodo.value = "";
 })
@@ -36,6 +62,9 @@ function addItem(value){
         .addEventListener("click", function(e) {
             const li = this.parentElement;
             li.remove();
+            const span = li.querySelector("span");
+            console.log('span.textContent :>> ', span.textContent);
+            removeItemsLocalStorage(span.textContent)
     })
     
 }
