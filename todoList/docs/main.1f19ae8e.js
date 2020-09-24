@@ -118,9 +118,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-// import {getItemLocalStorage} from './localStorage.js'
-// import {initTodoListItems} from './gestionItems.js'
-// import {gestionInputTodo, gestionInputComm} from './event.js'
 var superToggle = function superToggle(el, classes) {
   classes.forEach(function (cl) {
     return el.classList.toggle(cl);
@@ -256,6 +253,7 @@ page();
 initTodoListItems();
 
 function index(e) {
+  e.preventDefault();
   toggleDisplayTodoItem("todo");
   var desc = document.querySelector(".description");
   desc.textContent = "What do you want to get done today?";
@@ -263,6 +261,7 @@ function index(e) {
 }
 
 function item(e) {
+  e.preventDefault();
   console.log('e :>> ', e);
   var id = e.params.id || 0;
   toggleDisplayTodoItem("item");
@@ -326,7 +325,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64057" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64112" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
