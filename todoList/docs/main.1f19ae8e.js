@@ -245,20 +245,18 @@ function gestionInputTodo() {
     inputTodo.value = "";
   };
 } // gestion page.js
+// page('/', index);
+// page('/item/:id', item);
+// page();
 
 
-page('/', index);
-page('/item/:id', item);
-page();
-initTodoListItems();
+initTodoListItems(); // function index(e) {
+// e.preventDefault();
 
-function index(e) {
-  e.preventDefault();
-  toggleDisplayTodoItem("todo");
-  var desc = document.querySelector(".description");
-  desc.textContent = "What do you want to get done today?";
-  gestionInputTodo();
-}
+toggleDisplayTodoItem("todo");
+var desc = document.querySelector(".description");
+desc.textContent = "What do you want to get done today?";
+gestionInputTodo(); // }
 
 function item(e) {
   e.preventDefault();
@@ -325,7 +323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64112" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64147" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
