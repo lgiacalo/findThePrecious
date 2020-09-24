@@ -16,8 +16,12 @@ const templateLi = document.querySelector(".d-none li");
 function addNewItem(listItems, value) {
     const cloneli = templateLi.cloneNode(true);
     cloneli.querySelector("a").textContent = value;
-    listItems.appendChild(cloneli);
+    listItems.insertAdjacentElement('afterbegin', cloneli);
     return cloneli;
+}
+
+const superToggle = (el, classes) => {
+    classes.forEach(cl => el.classList.toggle(cl));
 }
 
 function newItem(value){
@@ -25,12 +29,13 @@ function newItem(value){
     console.log('newItem :>> ', newItem);
     newItem.querySelector(".button-check")
         .addEventListener("click", (e) => {
-        e.target.classList.toggle("far");
-        e.target.classList.toggle("fa-circle");
-        e.target.classList.toggle("fas");
-        e.target.classList.toggle("fa-check-circle");
-        e.target.classList.toggle("item-check");
-        newItem.querySelector("span").classList.toggle("item-check");
+            superToggle(e.target, ["far", "fa-circle", "fas", "fa-check-circle"]);
+            newItem.querySelector("span").classList.toggle("item-check");
+    })
+    newItem.querySelector(".button-delete")
+        .addEventListener("click", function(e) {
+            const li = this.parentElement;
+            li.remove();
     })
     
 }
@@ -54,8 +59,8 @@ page('/contact/:contactName', contact);
 page();
 
 function index(e) {
-  document.querySelector('p')
-    .textContent = 'viewing index';
+//   document.querySelector('p')
+//     .textContent = 'viewing index';
 //   console.log('e :>> ', e);
 }
 

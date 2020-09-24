@@ -19,9 +19,14 @@ div.container h1 {
 div.container a {
   text-decoration: none;
   color: black;
+  font-weight: bolder;
 }
 div.container .item-check {
+  color: gray;
+}
+div.container .item-check a {
   text-decoration: line-through;
+  font-weight: normal;
 }
 
 button {

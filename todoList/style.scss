@@ -21,9 +21,16 @@ div.container {
   a {
     text-decoration: none;
     color: black;
+    font-weight: bolder;
+
   }
   .item-check {
-    text-decoration:line-through;
+    color: gray;
+    a {
+      text-decoration:line-through;
+      font-weight: normal;
+    }
+
   }
 }
 
