@@ -120,19 +120,19 @@ const formTodo = document.querySelector(".js-form");
 
 // gestion page.js
 
-page('/', index);
-page('/item/:id', item);
-page();
+// page('/', index);
+// page('/item/:id', item);
+// page();
 
 initTodoListItems();
 
-function index(e) {
-    e.preventDefault();
+// function index(e) {
+    // e.preventDefault();
     toggleDisplayTodoItem("todo");
     const desc = document.querySelector(".description");
     desc.textContent = "What do you want to get done today?";
     gestionInputTodo();
-}
+// }
 
 function item(e) {
     e.preventDefault();
