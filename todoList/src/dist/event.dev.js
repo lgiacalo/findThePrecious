@@ -19,6 +19,7 @@ function gestionInputComm(id) {
 
     if (inputComm.value.trim()) {
       console.log('input :>> ', inputComm.value);
+      console.log('id :>> ', id);
     }
 
     inputComm.value = "";
