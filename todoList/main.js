@@ -5,26 +5,24 @@ const superToggle = (el, classes) => {
 
 
 
-function removeItemsLocalStorage(value){
+function removeItemLocalStorage(value){
     let items = JSON.parse(localStorage.getItem("items"));
 
     let newItems = items.filter(i => i.title !== value);
     localStorage.setItem("items", JSON.stringify(newItems));
 }
 
-function recordLocalStorage(value) {
-    let items = JSON.parse(localStorage.getItem("items"));
+function recordItemLocalStorage(value) {
+    let items = JSON.parse(localStorage.getItem("items")) ?? [];
 
-    if (items === null) items = [{title: value, comm: {}}];
-    else if (items.every(i => i.title !== value)) {
-        items.push({title: value, comm: {}})
-    } else return false
+    if (items.some(i => i.title === value)) return false
+    items.push({title: value, check: false, comm: {}})
 
     localStorage.setItem("items", JSON.stringify(items));
     return true;
 }
 
-
+// function updateLocalStorage()
 
 
 // event to add new todo
@@ -33,7 +31,7 @@ formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
     e.preventDefault();
     if (inputTodo.value) {
-        if (recordLocalStorage(inputTodo.value.trim())){
+        if (recordItemLocalStorage(inputTodo.value.trim())){
             addItem(inputTodo.value.trim());
         }
     }
@@ -64,7 +62,7 @@ function addItem(value){
             li.remove();
             const span = li.querySelector("span");
             console.log('span.textContent :>> ', span.textContent);
-            removeItemsLocalStorage(span.textContent)
+            removeItemLocalStorage(span.textContent.trim())
     })
     
 }
