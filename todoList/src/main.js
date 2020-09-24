@@ -1,6 +1,6 @@
-import {getItemLocalStorage} from './src/localStorage.js'
-import {initTodoListItems} from './src/gestionItems.js'
-import {gestionInputTodo, gestionInputComm} from './src/event.js'
+import {getItemLocalStorage} from './localStorage.js'
+import {initTodoListItems} from './gestionItems.js'
+import {gestionInputTodo, gestionInputComm} from './event.js'
 
 
 // gestion page.js
