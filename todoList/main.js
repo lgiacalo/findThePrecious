@@ -1,45 +1,7 @@
 
-const superToggle = (el, classes) => {
-    classes.forEach(cl => el.classList.toggle(cl));
-}
+import {getItemsLocalStorage, recordItemLocalStorage} from './src/localStorage.js'
+import {createNewItem, setEventButton} from './src/gestionItems.js'
 
-
-// function getItemsLocalStorage(){
-//     return JSON.parse(localStorage.getItem("items"))
-// }
-
-// function removeItemLocalStorage(value){
-//     let items = JSON.parse(localStorage.getItem("items"));
-
-//     let newItems = items.filter(i => i.title !== value);
-//     localStorage.setItem("items", JSON.stringify(newItems));
-// }
-
-// function recordItemLocalStorage(value) {
-//     const items = JSON.parse(localStorage.getItem("items")) ?? [];
-//     const id = (items.length) ? items[items.length - 1].id + 1 : 1; 
-
-//     if (items.some(i => i.title === value)) return false
-//     items.push({id: id, title: value, check: false, comm: {}})
-
-//     localStorage.setItem("items", JSON.stringify(items));
-//     return id;
-// }
-
-// function toggleCheckLocalStorage(value){
-//     let items = JSON.parse(localStorage.getItem("items"));
-//     let it = items.find(it => it.title === value);
-
-//     it.check = !(it.check);
-//     localStorage.setItem("items", JSON.stringify(items));
-// }
-
-import * as ls from './src/localStorage'
-
-
-const listItems = document.getElementById("list-items");
-const templateLi = document.querySelector(".d-none li");
-const classNameButton = ["far", "fa-circle", "fas", "fa-check-circle"];
 
 // event to add new todo
 const formTodo = document.querySelector(".js-form");
@@ -48,9 +10,9 @@ formTodo.addEventListener("submit", (e) => {
 
     e.preventDefault();
     if (inputTodo.value.trim()) {
-        const id = ls.recordItemLocalStorage(inputTodo.value.trim())
+        const id = recordItemLocalStorage(inputTodo.value.trim())
         if (id){
-            let newItem = createNewItem(listItems, inputTodo.value.trim(), id, false);
+            let newItem = createNewItem(inputTodo.value.trim(), id, false);
             setEventButton(newItem);
         }
     }
@@ -58,43 +20,11 @@ formTodo.addEventListener("submit", (e) => {
 })
 
 
-function createNewItem(listItems, value, id, check) {
-    const cloneli = templateLi.cloneNode(true);
-
-    cloneli.querySelector("a").textContent = value;
-    if (check) {
-        superToggle(cloneli.querySelector("i"), classNameButton);
-        cloneli.querySelector("span").classList.toggle("item-check");
-    }
-    listItems.insertAdjacentElement('afterbegin', cloneli);
-    cloneli.querySelector("a").href += id;
-    return cloneli;
-}
-
-function setEventButton(item){
-    const value = item.querySelector("a").textContent.trim();
-
-    item.querySelector(".button-check")
-        .addEventListener("click", (e) => {
-            superToggle(e.target, classNameButton);
-            item.querySelector("span").classList.toggle("item-check");
-            ls.toggleCheckLocalStorage(value);
-    })
-    item.querySelector(".button-delete")
-        .addEventListener("click", function(e) {
-            const li = this.parentElement;
-            li.remove();
-            ls.removeItemLocalStorage(value);
-        })
-}
-
-// const listItems = document.getElementById("list-items");
-
 function initTodoList(){
-    const items = ls.getItemsLocalStorage() ?? [];
+    const items = getItemsLocalStorage() ?? [];
     
     items.forEach(it => {
-        const li = createNewItem(listItems, it.title, it.id, it.check);
+        const li = createNewItem(it.title, it.id, it.check);
         setEventButton(li);
     });
 }
