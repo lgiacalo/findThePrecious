@@ -1,9 +1,10 @@
 
-import {getItemsLocalStorage, recordItemLocalStorage} from './src/localStorage.js'
-import {createNewItem, setEventButton} from './src/gestionItems.js'
+import {recordItemLocalStorage} from './src/localStorage.js'
+import {initTodoListItems, createNewItem, setEventButton} from './src/gestionItems.js'
 
+initTodoListItems();
 
-// event to add new todo
+// submit form - add new todo
 const formTodo = document.querySelector(".js-form");
 formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
@@ -20,17 +21,6 @@ formTodo.addEventListener("submit", (e) => {
 })
 
 
-function initTodoList(){
-    const items = getItemsLocalStorage() ?? [];
-    
-    items.forEach(it => {
-        const li = createNewItem(it.title, it.id, it.check);
-        setEventButton(li);
-    });
-}
-
-
-initTodoList();
 
 
 
@@ -38,7 +28,7 @@ initTodoList();
 // gestion page.js
 
 page('/', index);
-page('/item/:item', item);
+page('/item/:id', item);
 page('/about', about);
 page('/contact/:contactName', contact);
 page();
@@ -53,9 +43,8 @@ function index(e) {
 
 function item(e) {
   console.log('e :>> ', e);
-  page.redirect("/item/1", "/item/14");
-  document.querySelector('p')
-    .textContent = 'viewing item ' + (e.params.item || '');
+  const id = e.params.id || 0;
+//   page.redirect("/item/1", "/item/14");
 }
 
 

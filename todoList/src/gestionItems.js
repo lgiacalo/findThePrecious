@@ -10,6 +10,15 @@ const superToggle = (el, classes) => {
     classes.forEach(cl => el.classList.toggle(cl));
 }
 
+export function initTodoListItems(){
+    const items = ls.getItemsLocalStorage() ?? [];
+    
+    items.forEach(it => {
+        const li = createNewItem(it.title, it.id, it.check);
+        setEventButton(li);
+    });
+}
+
 
 export function createNewItem(value, id, check) {
     const cloneli = templateLi.cloneNode(true);
