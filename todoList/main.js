@@ -4,37 +4,37 @@ const superToggle = (el, classes) => {
 }
 
 
-function getItemsLocalStorage(){
-    return JSON.parse(localStorage.getItem("items"))
-}
+// function getItemsLocalStorage(){
+//     return JSON.parse(localStorage.getItem("items"))
+// }
 
-function removeItemLocalStorage(value){
-    let items = JSON.parse(localStorage.getItem("items"));
+// function removeItemLocalStorage(value){
+//     let items = JSON.parse(localStorage.getItem("items"));
 
-    let newItems = items.filter(i => i.title !== value);
-    localStorage.setItem("items", JSON.stringify(newItems));
-}
+//     let newItems = items.filter(i => i.title !== value);
+//     localStorage.setItem("items", JSON.stringify(newItems));
+// }
 
-function recordItemLocalStorage(value) {
-    const items = JSON.parse(localStorage.getItem("items")) ?? [];
-    const id = (items.length) ? items[items.length - 1].id + 1 : 1; 
+// function recordItemLocalStorage(value) {
+//     const items = JSON.parse(localStorage.getItem("items")) ?? [];
+//     const id = (items.length) ? items[items.length - 1].id + 1 : 1; 
 
-    if (items.some(i => i.title === value)) return false
-    items.push({id: id, title: value, check: false, comm: {}})
+//     if (items.some(i => i.title === value)) return false
+//     items.push({id: id, title: value, check: false, comm: {}})
 
-    localStorage.setItem("items", JSON.stringify(items));
-    return id;
-}
+//     localStorage.setItem("items", JSON.stringify(items));
+//     return id;
+// }
 
-function toggleCheckLocalStorage(value){
-    let items = JSON.parse(localStorage.getItem("items"));
-    let it = items.find(it => it.title === value);
+// function toggleCheckLocalStorage(value){
+//     let items = JSON.parse(localStorage.getItem("items"));
+//     let it = items.find(it => it.title === value);
 
-    it.check = !(it.check);
-    localStorage.setItem("items", JSON.stringify(items));
-}
+//     it.check = !(it.check);
+//     localStorage.setItem("items", JSON.stringify(items));
+// }
 
-
+import * as ls from './src/localStorage'
 
 
 const listItems = document.getElementById("list-items");
@@ -47,8 +47,8 @@ formTodo.addEventListener("submit", (e) => {
     const inputTodo = document.querySelector(".js-todo-input")
 
     e.preventDefault();
-    if (inputTodo.value) {
-        const id = recordItemLocalStorage(inputTodo.value.trim())
+    if (inputTodo.value.trim()) {
+        const id = ls.recordItemLocalStorage(inputTodo.value.trim())
         if (id){
             let newItem = createNewItem(listItems, inputTodo.value.trim(), id, false);
             setEventButton(newItem);
@@ -78,19 +78,20 @@ function setEventButton(item){
         .addEventListener("click", (e) => {
             superToggle(e.target, classNameButton);
             item.querySelector("span").classList.toggle("item-check");
-            toggleCheckLocalStorage(value);
+            ls.toggleCheckLocalStorage(value);
     })
     item.querySelector(".button-delete")
         .addEventListener("click", function(e) {
             const li = this.parentElement;
             li.remove();
-            removeItemLocalStorage(value);
+            ls.removeItemLocalStorage(value);
         })
 }
 
+// const listItems = document.getElementById("list-items");
 
 function initTodoList(){
-    const items = getItemsLocalStorage() ?? [];
+    const items = ls.getItemsLocalStorage() ?? [];
     
     items.forEach(it => {
         const li = createNewItem(listItems, it.title, it.id, it.check);
