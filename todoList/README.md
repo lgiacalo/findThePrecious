@@ -2,4 +2,4 @@
 
 test avec dir docs
 add preventDefault
-up
+remove page.js
