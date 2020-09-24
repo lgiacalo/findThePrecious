@@ -1,6 +1,3 @@
-// import {getItemLocalStorage} from './localStorage.js'
-// import {initTodoListItems} from './gestionItems.js'
-// import {gestionInputTodo, gestionInputComm} from './event.js'
 
  const superToggle = (el, classes) => {
     classes.forEach(cl => el.classList.toggle(cl));
