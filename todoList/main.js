@@ -22,8 +22,18 @@ function recordItemLocalStorage(value) {
     return true;
 }
 
-// function updateLocalStorage()
+function toggleCheckLocalStorage(value){
+    let items = JSON.parse(localStorage.getItem("items"));
+    let it = items.find(it => it.title === value);
+    it.check = !(it.check);
+    localStorage.setItem("items", JSON.stringify(items));
+}
 
+
+
+
+const listItems = document.getElementById("list-items");
+const templateLi = document.querySelector(".d-none li");
 
 // event to add new todo
 const formTodo = document.querySelector(".js-form");
@@ -32,40 +42,38 @@ formTodo.addEventListener("submit", (e) => {
     e.preventDefault();
     if (inputTodo.value) {
         if (recordItemLocalStorage(inputTodo.value.trim())){
-            addItem(inputTodo.value.trim());
+            let newItem = createNewItem(listItems, inputTodo.value.trim(), false);
+            setEventButton(newItem);
         }
     }
     inputTodo.value = "";
 })
 
-const listItems = document.getElementById("list-items");
-const templateLi = document.querySelector(".d-none li");
 
-function createNewItem(listItems, value) {
+function createNewItem(listItems, value, check) {
     const cloneli = templateLi.cloneNode(true);
     cloneli.querySelector("a").textContent = value;
     listItems.insertAdjacentElement('afterbegin', cloneli);
     return cloneli;
 }
 
-function addItem(value){
-    const newItem = createNewItem(listItems, value);
-    console.log('newItem :>> ', newItem);
-    newItem.querySelector(".button-check")
+function setEventButton(item){
+    const value = item.querySelector("a").textContent.trim();
+    item.querySelector(".button-check")
         .addEventListener("click", (e) => {
             superToggle(e.target, ["far", "fa-circle", "fas", "fa-check-circle"]);
-            newItem.querySelector("span").classList.toggle("item-check");
+            item.querySelector("span").classList.toggle("item-check");
+            toggleCheckLocalStorage(value);
     })
-    newItem.querySelector(".button-delete")
+    item.querySelector(".button-delete")
         .addEventListener("click", function(e) {
             const li = this.parentElement;
             li.remove();
-            const span = li.querySelector("span");
-            console.log('span.textContent :>> ', span.textContent);
-            removeItemLocalStorage(span.textContent.trim())
-    })
-    
+            removeItemLocalStorage(value);
+        })
 }
+
+
 
 
 
