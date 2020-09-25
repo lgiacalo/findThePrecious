@@ -4,6 +4,7 @@
 
 - parcel
 - page.js Single Page Application
+- localStorage
 - style.scss
 
 
