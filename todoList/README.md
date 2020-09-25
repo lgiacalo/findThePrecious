@@ -2,4 +2,3 @@
 
 voir todo: main.js
 test hasbang first
-remove preventDefault
