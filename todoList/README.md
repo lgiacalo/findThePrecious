@@ -2,4 +2,4 @@
 
 voir todo: main.js
 test hasbang first
-100eme test ! 
+remove preventDefault
