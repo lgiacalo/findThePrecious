@@ -5,4 +5,3 @@ test hasbang first
 add docs path
 remove page.base
 remove call index() before
-hum
