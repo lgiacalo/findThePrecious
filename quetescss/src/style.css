@@ -25,6 +25,9 @@ body main {
   background: url("../img/bg_light.png");
   color: black;
 }
+body main h2 {
+  font-size: 3vw;
+}
 
 .round7 {
   height: 175px;
