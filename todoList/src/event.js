@@ -1,5 +1,6 @@
-import {recordItemLocalStorage} from './localStorage.js'
+import {recordItemLocalStorage, recordCommLocalStorage} from './localStorage.js'
 import {createNewItem, setEventButton} from './gestionItems.js'
+import {createNewComm, setEventButtonComm} from './gestionComms.js'
 
 
 // submit form - add new todo
@@ -11,8 +12,14 @@ export function gestionInputComm(id){
 
         e.preventDefault();
         if (inputComm.value.trim()) {
-           console.log('input :>> ', inputComm.value);
+            console.log('input :>> ', inputComm.value);
+            const id_comm = recordCommLocalStorage(id, inputComm.value.trim());
+            console.log('id_comm :>> ', id_comm);
 
+            if (id_comm) {
+                let newComm = createNewComm(inputComm.value.trim(), id_comm);
+                setEventButtonComm(newComm);
+            }
         }
         inputComm.value = "";
     }
