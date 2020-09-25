@@ -6,3 +6,5 @@ add docs path
 remove page.base
 remove call index() before
 remove docs
+
+Uncaught SyntaxError: Cannot use import statement outside a module
