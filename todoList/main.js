@@ -136,6 +136,7 @@ page();
 
 
 initTodoListItems();
+index();
 
 // todo: decommenter la fonction
 function index() {
