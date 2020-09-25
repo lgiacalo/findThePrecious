@@ -131,12 +131,12 @@ page.configure({ hashbang: true });
 // page('/item/:id', item);
 // page();
 
-// page('/findThePrecious/todoList/docs/', index);
-// page('/findThePrecious/todoList/docs/item/:id', item);
-// page();
+page('/findThePrecious/todoList/docs/', index);
+page('/findThePrecious/todoList/docs/item/:id', item);
+page();
 
 initTodoListItems();
-index();
+// index();
 
 // todo: decommenter la fonction
 function index() {
