@@ -120,33 +120,35 @@ const formTodo = document.querySelector(".js-form");
 
 // test gestion page.js
 
-// page('/', index);
-// page('/item/:id', item);
-// page();
-
-
-
-// todo: A decommenter pour tester page
-// page.configure({ hashbang: true });
 
 // page('/findThePrecious/todoList/', index);
 // page('/findThePrecious/todoList/item/:id', item);
 // page();
 
 
+// todo: A decommenter pour tester page
+page.configure({ hashbang: true });
+
+page.base('/findThePrecious/todoList')
+page('/', index);
+page('/item/:id', item);
+page();
+
+
 initTodoListItems();
+index();
 
 // todo: decommenter la fonction
-// function index(e) {
+function index() {
     // e.preventDefault();
     toggleDisplayTodoItem("todo");
     const desc = document.querySelector(".description");
     desc.textContent = "What do you want to get done today?";
     gestionInputTodo();
-// }
+}
 
 function item(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     console.log('e :>> ', e);
     const id = e.params.id || 0;
