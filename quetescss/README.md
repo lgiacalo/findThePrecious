@@ -1,4 +1,4 @@
-# [Preprocesseur CSS - SCSS](https://lgiacalo.github.io/quetescss/)
+# [Preprocesseur CSS - SCSS](https://lgiacalo.github.io/findThePrecious/quetescss/)
 
 ## Challenge
 
@@ -33,4 +33,4 @@ Poste le résultat sur une page github. Tu peux reprendre et compléter ton proj
 
 
 
-## [View Website with scss](https://lgiacalo.github.io/quetescss/)
+## [View Website with scss](https://lgiacalo.github.io/findThePrecious/quetescss/)
