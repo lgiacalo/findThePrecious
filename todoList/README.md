@@ -2,3 +2,4 @@
 
 voir todo: main.js
 test hasbang first
+ok
