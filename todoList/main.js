@@ -8,7 +8,7 @@ import {gestionInputTodo, gestionInputComm} from './src/event.js'
 
 page.configure({ hashbang: true });
 
-page.base('/findThePrecious/todoList/docs')
+page.base('/findThePrecious/todoList/')
 page('/', index);
 page('/item/:id', item);
 page();
