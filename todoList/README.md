@@ -1,4 +1,4 @@
 # [TODO LIST](https://lgiacalo.github.io/findThePrecious/todoList)
 
 voir todo: main.js
-test hasbang
+test hasbang first
