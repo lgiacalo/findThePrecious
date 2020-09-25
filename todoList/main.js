@@ -129,7 +129,7 @@ const formTodo = document.querySelector(".js-form");
 // todo: A decommenter pour tester page
 page.configure({ hashbang: true });
 
-page.base('/findThePrecious/todoList')
+page.base('/findThePrecious/todoList/docs')
 page('/', index);
 page('/item/:id', item);
 page();
