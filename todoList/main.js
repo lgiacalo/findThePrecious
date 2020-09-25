@@ -118,11 +118,15 @@ const formTodo = document.querySelector(".js-form");
     }
 }
 
-// gestion page.js
+// test gestion page.js
 
 // page('/', index);
 // page('/item/:id', item);
 // page();
+
+
+
+// todo: A decommenter pour tester page
 
 // page('/findThePrecious/todoList/', index);
 // page('/findThePrecious/todoList/item/:id', item);
@@ -130,6 +134,7 @@ const formTodo = document.querySelector(".js-form");
 
 initTodoListItems();
 
+// todo: decommenter la fonction
 // function index(e) {
 //     e.preventDefault();
     toggleDisplayTodoItem("todo");

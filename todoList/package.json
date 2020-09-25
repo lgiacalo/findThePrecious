@@ -9,7 +9,6 @@
     "build-dev": "parcel build ./index.html --out-dir docs --no-minify --public-url ./",
     "prebuild": "shx rm -rf dist/* docs/*",
     "build": "parcel build ./index.html --out-dir docs --public-url ./",
-    "push-gh-pages": "push-dir --dir=docs --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "shx": "^0.3.2",
