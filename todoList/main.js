@@ -132,7 +132,7 @@ page.configure({ hashbang: true });
 // page();
 
 page('/findThePrecious/todoList/docs/', index);
-page('/findThePrecious/todoList/docs/item/:id', item);
+page('/findThePrecious/todoList/item/:id', item);
 page();
 
 initTodoListItems();
