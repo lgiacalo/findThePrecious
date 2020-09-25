@@ -14,7 +14,7 @@ export function removeCommItemLocalStorage(id, id_comm){
     let items = getItemsLocalStorage();
 
     items = items.map(item => {
-        if (item.id === id) {
+        if (item.id == id) {
             item.comm = item.comm.filter(c => c.id_comm !== id_comm);
         }
         return item;
