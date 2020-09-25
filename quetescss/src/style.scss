@@ -19,14 +19,13 @@ body {
 
     nav {
         background-color: $orange;
-        font-size: 1.5vw;
+        font-size: 1.0vw;
 
         a.navbar-brand {
             max-width: 70%;
         }
 
-        a,
-        p.vertical-bar {
+        a {
             color: $white;
             white-space: nowrap;
         }
@@ -41,7 +40,6 @@ body {
     main {
         background: url('../img/bg_light.png');
         color: black;
-
     }
 }
 

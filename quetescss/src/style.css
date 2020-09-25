@@ -7,13 +7,12 @@ body {
 }
 body nav {
   background-color: #fe661d;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 body nav a.navbar-brand {
   max-width: 70%;
 }
-body nav a,
-body nav p.vertical-bar {
+body nav a {
   color: rgba(255, 255, 255, 0.9);
   white-space: nowrap;
 }
