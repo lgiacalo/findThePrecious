@@ -1,29 +1,46 @@
-.carousel-control-next,
-.carousel-control-prev {
-  filter: invert(100%);
+@font-face {
+  font-family: "Aniron";
+  src: url("../fonts/Aniron.ttf"), url("../fonts/Aniron.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
-
-.card .card-img-overlay h3 {
-  display: none;
+body {
+  font-family: "Aniron" !important;
 }
-.card:hover .card-img-overlay h3 {
-  display: block;
+body nav {
+  background-color: #fe661d;
+  font-size: 1.5vw;
+}
+body nav a.navbar-brand {
+  max-width: 70%;
+}
+body nav a,
+body nav p.vertical-bar {
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+body nav a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+body main {
+  background: url("../img/bg_light.png");
+  color: black;
 }
 
 .round7 {
   height: 175px;
   width: 175px;
-  border: 14.5833333333px solid #ffcb00;
+  border: 14.5833333333px solid #ffc20a;
   border-radius: 50%;
-  box-shadow: 4.375px 4.375px 5.8333333333px #997a00, inset 4.375px 4.375px 5.8333333333px #997a00;
+  box-shadow: 4.375px 4.375px 5.8333333333px #a37a00, inset 4.375px 4.375px 5.8333333333px #a37a00;
 }
 
 .round8 {
   height: 50px;
   width: 50px;
-  border: 4.1666666667px solid #f97210;
+  border: 4.1666666667px solid #fe661d;
   border-radius: 50%;
-  box-shadow: 1.25px 1.25px 1.6666666667px #9f4504, inset 1.25px 1.25px 1.6666666667px #9f4504;
+  box-shadow: 1.25px 1.25px 1.6666666667px #b43b01, inset 1.25px 1.25px 1.6666666667px #b43b01;
 }
 
 .round1 {

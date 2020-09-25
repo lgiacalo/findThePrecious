@@ -1,22 +1,47 @@
 @use "sass:color";
 
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
+@font-face {
+    font-family: "Aniron";
+    src: url("../fonts/Aniron.ttf"),
+        url("../fonts/Aniron.ttf") format("truetype"),
+        local("Arial Black"), local("sherif")
 }
 
+$orange: #fe661d;
+$yellow: #ffc20a;
+$gray: #39424e;
+$white: rgba(#fff, .90);
 
-.card {
-    .card-img-overlay {
-        h3 {
-        display: none;
+
+
+body {
+    font-family: "Aniron" !important;
+
+    nav {
+        background-color: $orange;
+        font-size: 1.5vw;
+
+        a.navbar-brand {
+            max-width: 70%;
+        }
+
+        a,
+        p.vertical-bar {
+            color: $white;
+            white-space: nowrap;
+        }
+
+        a:hover {
+            color: $white;
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
         }
     }
 
-    &:hover .card-img-overlay {
-        h3 {
-            display: block;
-        }
+    main {
+        background: url('../img/bg_light.png');
+        color: black;
+
     }
 }
 
@@ -29,15 +54,16 @@
 }
 
 .round7 {
-    @include ring(175px, #ffcb00)
+    @include ring(175px, $yellow);
 }
+
 .round8 {
-    @include ring(50px, #f97210)
+    @include ring(50px, $orange);
 }
 
 @for $i from 1 through 6 {
     .round#{$i} {
-        @include ring(10px + (($i + 1) * 12), #39424e);
+        @include ring(10px + (($i + 1) * 12), $gray);
         margin-right: -(((5 + $i) * 15) * 0.20px);
     }
 }
