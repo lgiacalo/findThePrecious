@@ -10,11 +10,21 @@ export function getItemLocalStorage(id){
     return items.find(it => it.id == id);
 }
 
+export function removeCommItemLocalStorage(id, id_comm){
+    let items = getItemsLocalStorage();
+
+    items = items.map(item => {
+        item.comm = item.comm.filter(c => c.id_comm !== id_comm);
+        return item;
+    })
+    localStorage.setItem("items", JSON.stringify(items));
+}
+
 export function recordCommLocalStorage(id, value){
     const items = getItemsLocalStorage()
     const item = items.find(it => it.id == id);
     const id_comm = item.comm.length
-        ? item.comm[item.comm.length - 1].id_comm : 1;
+        ? 'c' + (item.comm[item.comm.length - 1].id_comm[1] * 1 + 1) : "c1";
 
     item.comm.push({id_comm: id_comm, value: value})
     localStorage.setItem("items", JSON.stringify(items));

@@ -1,10 +1,7 @@
 import * as ls from './localStorage.js'
-import {superToggle} from './utils.js'
 
 const templateLiComm = document.querySelector("#template-li-comm li");
-// const classNameButton = ["far", "fa-circle", "fas", "fa-check-circle"];
 const listComm = document.getElementById("list-comm");
-
 
 export function initTodoListComms(id){
     const comms = ls.getCommsItemLocalStorage(id) ?? [];
@@ -15,26 +12,32 @@ export function initTodoListComms(id){
     });
 }
 
-export function createNewComm(value, id_com) {
+export function removeListComms(){
+    let ps = document.querySelectorAll('p');
+
+    ps.forEach(p => {
+        if (p.id[0] === 'c'){
+            p.parentElement.remove();
+        }
+    })
+}
+
+export function createNewComm(value, id_comm) {
     const clonelicomm = templateLiComm.cloneNode(true);
 
     clonelicomm.querySelector("p").textContent = value;
-    // if (check) {
-    //     superToggle(clonelicomm.querySelector("i"), classNameButton);
-    //     cloneli.querySelector("span").classList.toggle("item-check");
-    // }
-    listComm.insertAdjacentElement('afterbegin', clonelicomm);
-    // clonelicomm.querySelector("a").href += id;
+    clonelicomm.querySelector("p").id = id_comm;
+    listComm.append(clonelicomm);
     return clonelicomm;
 }
 
 export function setEventButtonComm(comm) {
-    // const value = comm.querySelector("a").textContent.trim();
 
     comm.querySelector(".button-delete")
         .addEventListener("click", function(e) {
             const li = this.parentElement;
             li.remove();
-            // ls.removeItemLocalStorage(value);
+            const id = listComm.parentElement.querySelector("h2").id;
+            ls.removeCommItemLocalStorage(id, li.querySelector("p").id);
         })
 }

@@ -1,6 +1,6 @@
 import {getItemLocalStorage} from './src/localStorage.js'
 import {initTodoListItems} from './src/gestionItems.js'
-import {initTodoListComms} from './src/gestionComms.js'
+import {initTodoListComms, removeListComms} from './src/gestionComms.js'
 import {gestionInputTodo, gestionInputComm} from './src/event.js'
 
 
@@ -13,12 +13,11 @@ page('/', index);
 page('/item/:id', item);
 page();
 
-
 initTodoListItems();
 index();
 
 function index() {
-
+    removeListComms();
     toggleDisplayTodoItem("todo");
     const desc = document.querySelector(".description");
     desc.textContent = "What do you want to get done today?";
@@ -26,8 +25,6 @@ function index() {
 }
 
 function item(e) {
-
-    console.log('e :>> ', e);
     const id = e.params.id || 0;
     
     toggleDisplayTodoItem("item");
@@ -42,6 +39,7 @@ function item(e) {
     
     const h2 = document.querySelector(".title-todo");
     h2.textContent = item.title;
+    h2.id = id;
     initTodoListComms(id);
     gestionInputComm(id);
 }
