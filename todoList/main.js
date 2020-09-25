@@ -126,14 +126,14 @@ const formTodo = document.querySelector(".js-form");
 // todo: A decommenter pour tester page
 page.configure({ hashbang: true });
 
-// page.base('/findThePrecious/todoList/docs')
-// page('/', index);
-// page('/item/:id', item);
-// page();
-
-page('/findThePrecious/todoList/docs/', index);
-page('/findThePrecious/todoList/item/:id', item);
+page.base('/findThePrecious/todoList/docs')
+page('/', index);
+page('/item/:id', item);
 page();
+
+// page('/findThePrecious/todoList/docs/', index);
+// page('/findThePrecious/todoList/item/:id', item);
+// page();
 
 initTodoListItems();
 // index();
@@ -159,7 +159,7 @@ function item(e) {
     const item = getItemLocalStorage(id);
     if (!item) {
         console.log("pas d'item");
-        page.redirect('/findThePrecious/todoList/docs/');
+        page.redirect('/');
         return;
     }
     
