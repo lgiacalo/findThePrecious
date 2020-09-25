@@ -1,11 +1,15 @@
 # [TODO LIST](https://lgiacalo.github.io/findThePrecious/todoList)
 
-voir todo: main.js
-test hasbang first
-add docs path
-remove page.base
-remove call index() before
-remove docs
+## Tools
 
-Uncaught SyntaxError: Cannot use import statement outside a module
-remove slash
+- parcel
+- page.js Single Page Application
+- style.scss
+
+
+## A retenir
+
+	Uncaught SyntaxError: Cannot use import statement outside a module
+
+Ajouter type module si besoin d'import:
+`<script type="module" src="./main.js"></script>`
