@@ -1,0 +1,81 @@
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.card .card-img-overlay h3 {
+  display: none;
+}
+.card:hover .card-img-overlay h3 {
+  display: block;
+}
+
+.round7 {
+  height: 175px;
+  width: 175px;
+  border: 14.5833333333px solid #ffcb00;
+  border-radius: 50%;
+  box-shadow: 4.375px 4.375px 5.8333333333px #997a00, inset 4.375px 4.375px 5.8333333333px #997a00;
+}
+
+.round8 {
+  height: 50px;
+  width: 50px;
+  border: 4.1666666667px solid #f97210;
+  border-radius: 50%;
+  box-shadow: 1.25px 1.25px 1.6666666667px #9f4504, inset 1.25px 1.25px 1.6666666667px #9f4504;
+}
+
+.round1 {
+  height: 34px;
+  width: 34px;
+  border: 2.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 0.85px 0.85px 1.1333333333px #0e1013, inset 0.85px 0.85px 1.1333333333px #0e1013;
+  margin-right: -18px;
+}
+
+.round2 {
+  height: 46px;
+  width: 46px;
+  border: 3.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 1.15px 1.15px 1.5333333333px #0e1013, inset 1.15px 1.15px 1.5333333333px #0e1013;
+  margin-right: -21px;
+}
+
+.round3 {
+  height: 58px;
+  width: 58px;
+  border: 4.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 1.45px 1.45px 1.9333333333px #0e1013, inset 1.45px 1.45px 1.9333333333px #0e1013;
+  margin-right: -24px;
+}
+
+.round4 {
+  height: 70px;
+  width: 70px;
+  border: 5.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 1.75px 1.75px 2.3333333333px #0e1013, inset 1.75px 1.75px 2.3333333333px #0e1013;
+  margin-right: -27px;
+}
+
+.round5 {
+  height: 82px;
+  width: 82px;
+  border: 6.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 2.05px 2.05px 2.7333333333px #0e1013, inset 2.05px 2.05px 2.7333333333px #0e1013;
+  margin-right: -30px;
+}
+
+.round6 {
+  height: 94px;
+  width: 94px;
+  border: 7.8333333333px solid #39424e;
+  border-radius: 50%;
+  box-shadow: 2.35px 2.35px 3.1333333333px #0e1013, inset 2.35px 2.35px 3.1333333333px #0e1013;
+  margin-right: -33px;
+}

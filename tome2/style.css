@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Aniron";
-  src: url("../fonts/Aniron.ttf"), url("../fonts/Aniron.ttf") format("truetype"), local("Arial Black"), local("sherif");
+  src: url("./fonts/Aniron.ttf"), url("./fonts/Aniron.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
 @font-face {
   font-family: "PartyBusiness";
-  src: url("../fonts/PartyBusiness-4B0K.ttf"), url("../fonts/PartyBusiness-4B0K.ttf") format("truetype"), local("Arial Black"), local("sherif");
+  src: url("./fonts/PartyBusiness-4B0K.ttf"), url("./fonts/PartyBusiness-4B0K.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
 @font-face {
   font-family: "Tngani";
-  src: url("../fonts/Tngani.ttf"), url("../fonts/Tngani.ttf") format("truetype"), local("Arial Black"), local("sherif");
+  src: url("./fonts/Tngani.ttf"), url("./fonts/Tngani.ttf") format("truetype"), local("Arial Black"), local("sherif");
 }
 body {
   background-image: url("../img/bg_light.png");
@@ -106,7 +106,7 @@ body hr {
   transform: skew(-45deg);
 }
 body section.contact-us {
-  background-image: url("../img/bg_dark.png");
+  background-image: url("./img/bg_dark.png");
   color: white;
 }
 body section.contact-us h1 {
@@ -150,11 +150,11 @@ body section.media-object div div p span {
 }
 body section.media-object div.race {
   color: #fe661d;
-  background-image: url("../img/bg_dark.png");
+  background-image: url("./img/bg_dark.png");
   transform: skew(-20deg);
 }
 body section.panels {
-  background-image: url("../img/bg_dark.png");
+  background-image: url("./img/bg_dark.png");
 }
 body section.panels h1 {
   color: white;
@@ -210,12 +210,12 @@ body section.join .row .more-info {
 }
 body section.join .row .more-info div.mail span {
   display: inline-block;
-  background-image: url("../img/bg_dark.png");
+  background-image: url("./img/bg_dark.png");
   border: 1px solid black;
   transform: skew(-20deg);
 }
 body form#contact {
-  background-image: url("../img/bg_dark.png");
+  background-image: url("./img/bg_dark.png");
   color: white;
 }
 body form#contact h1 {
@@ -305,7 +305,7 @@ body form#contact h1 {
 .gandalf {
   max-width: 100%;
   background-size: 100%;
-  background-image: url("../img/sprite.png");
+  background-image: url("./img/sprite.png");
 }
 
 .aragorn {

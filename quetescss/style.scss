@@ -1,0 +1,43 @@
+@use "sass:color";
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+
+.card {
+    .card-img-overlay {
+        h3 {
+        display: none;
+        }
+    }
+
+    &:hover .card-img-overlay {
+        h3 {
+            display: block;
+        }
+    }
+}
+
+@mixin ring($size, $color) {
+    height: $size;
+    width: $size;
+    border: $size / 12 solid $color;
+    border-radius: 50%;
+    box-shadow: $size/40 $size/40 $size/30 darken($color, 20%), inset $size/40 $size/40 $size/30 darken($color, 20%);
+}
+
+.round7 {
+    @include ring(175px, #ffcb00)
+}
+.round8 {
+    @include ring(50px, #f97210)
+}
+
+@for $i from 1 through 6 {
+    .round#{$i} {
+        @include ring(10px + (($i + 1) * 12), #39424e);
+        margin-right: -(((5 + $i) * 15) * 0.20px);
+    }
+}

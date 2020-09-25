@@ -1,0 +1,33 @@
+.bg-gray {
+  background: #464545;
+}
+
+.bg-orange {
+  background: #ff8300;
+}
+
+.bg-yellow {
+  background: #ffcb00;
+}
+
+.bg-black {
+  background: black;
+}
+
+header h1 {
+  font-size: 7vw;
+}
+header blockquote.blockquote {
+  font-size: 2vw;
+}
+header blockquote.blockquote a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 700px !important;
+}
+main .row > div {
+  padding: 0;
+  border: 1px solid white;
+}

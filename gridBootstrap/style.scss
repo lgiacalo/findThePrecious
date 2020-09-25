@@ -1,0 +1,38 @@
+$gray: #464545;
+$orange: #ff8300;
+$yellow: #ffcb00;
+$black: black;
+
+
+.bg-gray {
+    background: $gray;
+}
+
+.bg-orange {
+    background: $orange;
+}
+.bg-yellow {
+    background: $yellow;
+}
+.bg-black {
+    background: $black;
+}
+
+header {
+    h1 {
+        font-size: 7vw;
+    }
+    blockquote.blockquote {
+        font-size: 2vw;
+        a {text-decoration: none;}
+    }
+}
+
+main {
+    max-width: 700px !important;
+    
+    .row > div {
+        padding: 0;
+        border: 1px solid white;
+    }
+}
