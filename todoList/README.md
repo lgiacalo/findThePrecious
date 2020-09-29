@@ -14,3 +14,5 @@
 
 Ajouter type module si besoin d'import:
 `<script type="module" src="./main.js"></script>`
+
+try chatbot clevy csml
