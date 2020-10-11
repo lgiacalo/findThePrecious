@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quel temps fait-il à ... ?</title>
+    <meta name="author" content="lgiacalo">
+    <meta name="description" content="Application Fetch meteo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container-fluid">
+    <main class="container-fluid text-center my-5">
+        <h1>Quel temps fait-il à ... ?</h1>
+
+        <form class="container-fluid w-75 my-5">
+            <div class="form-group">
+                <div class="d-none text-left alert alert-warning" role="alert"></div>
+                <input type="text" id="inputCity" class="form-control text-center" placeholder="Marseille">
+            </div>
+            <button type="submit" class="btn btn-block btn-info mb-2">Voir le résultat</button>
+        </form>
+    </main>
+
+    <section class="meteo container-fluid my-5 d-flex justify-content-center">
+
+        <div class="d-flex align-content-center">
+            <img class="img-thumbnail card-img-top" src="http://openweathermap.org/img/wn/01d@2x.png"
+                alt="image weather">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text text-nowrap mb-0"></p>
+                <p class="card-text text-info"></p>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
