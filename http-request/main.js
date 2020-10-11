@@ -18,7 +18,6 @@ function getMeteo(city){
     fetch(url)
         .then(response => response.json(), error => console.log(error))
         .then(json => {
-            console.log(json);
             if (json.cod !== 200)
                 throw new Error(json.message);
             divError.classList.add("d-none");
