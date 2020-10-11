@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
 })
 
 function getMeteo(city){
-    const url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=" + apikey;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=" + apikey;
 
     fetch(url)
         .then(response => response.json(), error => console.log(error))
@@ -35,7 +35,7 @@ const h5Meteo = document.querySelector("section.meteo h5");
 const pMeteo = document.getElementsByClassName("card-text");
 
 function displayMeteo(city, data){
-    imgMeteo.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+    imgMeteo.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     h5Meteo.innerHTML = city[0].toUpperCase() + city.slice(1);
     pMeteo[0].innerHTML = data.weather[0].main + " - " +  data.weather[0].description;
     pMeteo[1].innerHTML = Math.round(data.main.temp) + "°C";
