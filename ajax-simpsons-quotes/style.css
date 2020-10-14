@@ -26,15 +26,15 @@ button {
 
 #simpson {
   margin: auto;
-  display: flex;
+  display: none;
+  flex-direction: column;
   justify-content: center;
-
+  align-items: center;
 }
 
-.QuoteCard {
+div#simpson figure {
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap; 
   padding: 1.25em;
   max-width: 600px;
@@ -44,22 +44,25 @@ button {
   font-size: 1.2em;
 }
 
-.QuoteCard figcaption {
+div#simpson figure figcaption {
   width: auto;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.QuoteCard img {
+div#simpson figure img {
   max-height: 120px;
   margin-right: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.QuoteCard blockquote {
+div#simpson figure blockquote {
   margin: 0 0 1rem 0;
 }
 
-.QuoteCard figcaption cite {
+div#simpson figure figcaption cite {
   display: inline-block;
   margin: 0.125rem 0 0 0;
   display: flex;
