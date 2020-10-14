@@ -15,6 +15,7 @@ buttonReload.addEventListener("click", function () {
 function displaySimpson(dataSimpson) {
 
   img.src = dataSimpson.image;
+  img.alt = dataSimpson.character;
   blockquote.innerHTML = dataSimpson.quote;
   cite.innerHTML = dataSimpson.character;
   simpson.style.display = "flex";
